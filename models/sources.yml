@@ -5,27 +5,11 @@ sources:
     database: note1
     schema: note2
     tables:
-      - name: customers
-        columns:
-          - name: CUSTOMER_ID
-            tests:
-              - not_null
-              - unique
+     - name: customers
+     - name: account 
+     - name: transactions
+     - name: emp_raw
 
-      - name: payments
-        columns:
-          - name: PAYMENT_ID
-            tests:
-              - not_null
-              - unique
-
-      - name: orders
-        columns:
-          - name: ORDER_ID
-            tests:
-              - not_null
-              - unique
-      - name: emp_raw
 
 
 

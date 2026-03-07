@@ -40,7 +40,11 @@ models:
     +query_tag: dbt_t
     staging:
       +materialized: view
+
     marts:
       +materialized: table
+      
+    intermediate :
+      +materialized: view
 
 

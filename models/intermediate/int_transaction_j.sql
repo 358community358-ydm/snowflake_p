@@ -1,3 +1,4 @@
+
 select
 t.transaction_id,
 a.cust_id,

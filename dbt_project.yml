@@ -47,4 +47,8 @@ models:
     intermediate :
       +materialized: view
 
+    raw_data :
+      +materialized : table
+
+
 

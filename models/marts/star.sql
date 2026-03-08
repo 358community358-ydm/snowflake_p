@@ -1,11 +1,4 @@
 
-
-{{
-    config(materialized = 'incremental',
-    incremental_strategy = 'merge',
-    unique_key = 'cust_id')
-}}
-
 select l.cust_id,c.first_name,
 l.account_id,l.latest_balance
 from {{ ref('latest_balance') }} l 

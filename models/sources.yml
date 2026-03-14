@@ -6,6 +6,11 @@ sources:
     schema: note2
     tables:
      - name: customers
+       columns:
+         - name: cust_id
+           tests:
+             - not_null
+             - unique
      - name: account 
      - name: transactions
      - name: emp_raw

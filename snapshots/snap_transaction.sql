@@ -1,6 +1,5 @@
 {% snapshot snap_transaction %}
 
-    
 {{
     config(
         target_schema='snapshots',
@@ -10,7 +9,7 @@
     )
 }}
 
-SELECT *
-FROM {{ ref('stg_transaction') }}
+select *
+from {{ ref('stg_transacition') }}
 
-{% endsnapshot %}}
+{% endsnapshot %}

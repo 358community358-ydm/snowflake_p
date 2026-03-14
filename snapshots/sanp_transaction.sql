@@ -1,5 +1,6 @@
 {% snapshot snap_transaction %}
 
+    
 {{
     config(
         target_schema='snapshots',

@@ -1,4 +1,4 @@
-{% snapshot snap_transactions %}
+{% snapshot snap_transaction %}
 
 {{
     config(

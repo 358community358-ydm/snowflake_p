@@ -10,6 +10,6 @@
 }}
 
 select *
-from {{ ref('stg_transacition') }}
+from {{ ref('stg_transactions') }}
 
 {% endsnapshot %}

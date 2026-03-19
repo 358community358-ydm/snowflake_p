@@ -4,13 +4,13 @@
     config(
         target_schema='snapshots',
         unique_key='cust_id',
-        strategy='timestamp',
-        updated_at='created_date',
-         invalidate_hard_deletes=True
+        strategy='check',
+        check_cols=['first_name','last_name','email'],
+        invalidate_hard_deletes=True
     )
 }}
 
-select * 
+select *
 from {{ ref('stg_customers') }}
 
 {% endsnapshot %}

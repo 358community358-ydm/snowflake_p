@@ -13,7 +13,7 @@ with transaction_summary as (
                 else 0
             end
         ) as net_amount
-    from {{ ref('stg_transacition') }} t
+    from {{ ref('stg_transactions') }} t
     group by t.account_id
 
 )

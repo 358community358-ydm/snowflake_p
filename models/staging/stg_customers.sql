@@ -2,11 +2,17 @@
     config(materialized = 'view')
 }}
 
-select 
-cust_id,
-INITCAP(NULLIF(TRIM(first_name),'')) as first_name,
-INITCAP(NULLIF(TRIM(last_name),''))  as last_name,
-LOWER(NULLIF(TRIM(email),''))         as email,
-created_at                            as created_date
-from {{source('yogesh','customers')}}  
-where cust_id is not null
+SELECT 
+    cust_id,
+
+    INITCAP(NULLIF(TRIM(first_name), '')) AS first_name,
+
+    INITCAP(NULLIF(TRIM(last_name), ''))  AS last_name,
+
+    LOWER(NULLIF(TRIM(email), ''))        AS email,
+
+    CAST(created_at AS DATE) AS created_date
+
+FROM {{ source('yogesh', 'customers') }}
+
+WHERE cust_id IS NOT NULL
